@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main >
+      <div class="form-modal">
+        <div class="form-modal-header">
+          <h1>NEW Create a job</h1>
+          <span
+            style="
+              font-size: 14px;
+              margin-right: 10px;
+              font-weight: 800;
+              cursor: pointer;
+            "
+            >&#x2716</span
+          >
+        </div>
+
+        <!-- loading div -->
+        <div class="loading">
+          <div class="loader"></div>
+        </div>
+        <!-- succses div -->
+         <div class="success">
+          <span>Job is created! </span> &nbsp;
+          <span class="success-link"> View deal</span>
+         </div>
+        <!-- form -->
+        <form id="test">
+            <div class="form-section-wrapper">
+          <div class="form-section">
+            <h2>Client details</h2>
+            <div class="form-section_input-box">
+              <div class="double-input">
+                <input name="firstName" type="text" placeholder="First name" />
+                <input name="lastName" type="text" placeholder="Last name" />
+              </div>
+              <input name="phone" type="tel" placeholder="Phone" />
+              <input name="email" type="email" placeholder="Email (optional)" />
+            </div>
+          </div>
+          <div class="form-section">
+            <h2>Job details</h2>
+            <div class="form-section_input-box">
+              <div class="double-input">
+                <select name="jobType">
+                  <option  value="Job type">Job type</option>
+                </select>
+                <select name="jobSearch">
+                  <option value="Job search">Job search</option>
+                </select>
+              </div>
+              <textarea
+                name="desc"
+                placeholder="Job description (optional)"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-section">
+            <h2>Service location</h2>
+            <div class="form-section_input-box">
+              <input name="address" type="text" placeholder="Address" />
+              <input name="city" type="text" placeholder="City" />
+              <input name="state" type="text" placeholder="State" />
+              <div class="double-input">
+                <input name="zipCode" type="text" placeholder="Zip code" />
+                <select name="area">
+                  <option value="Area">Area</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <h2>Sheduled</h2>
+            <div class="form-section_input-box">
+              <input name="date" type="date" />
+              <div class="double-input">
+                <input name="timeStart" type="time" value="12:00" />
+                <input name="timeEnd" type="time" value="16:00" />
+              </div>
+              <select name="testSlect">
+                <option value="Test select">Test select</option>
+              </select>
+            </div>
+          </div>
+        </div>
+          <div class="btn-group">
+            <button type="submit">Create job</button>
+            <button style="background-color: rgb(148, 153, 159);" type="reset">Save job</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+<!-- iframe code -->
+<!-- <iframe src="" id="testIframe" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 9999;" frameborder="0"></iframe> -->
+
+<!-- btn code -->
+<!-- <button id="addBtn" style="width: 120px;
+    height: 35px;
+    background-color: #2D8647;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    color: white;" class="jobBtn">
+    <span
+    style="
+    font-size: 14px;
+    padding-right: 10px;
+    "
+    >&#43;</span
+  >
+  <span>Create a job</span>
+  </button> -->
+
+
+  <!-- js code -->
+  <!-- 
+  const btn = document.querySelector("#addBtn");
+  const iframe = document.querySelector("#testIframe");
+  
+  btn.addEventListener("click", () => {
+    iframe.style.display = "block";
+    iframe.src = "http://localhost:5500/"
+  });
+  window.addEventListener('message', (event) => {
+    if (event.data === 'reloadParent') {
+        window.location.reload();
+    }
+});
+   -->
